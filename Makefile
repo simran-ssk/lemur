@@ -11,7 +11,8 @@ ifeq ($(USER), root)
 else
 	npm install
 endif
-	pip install "setuptools>=0.9.8"
+	pip install pip==19.3
+	pip --version
 	# order matters here, base package must install first
 	pip install "file://`pwd`#egg=lemur[dev]"
 	pip install "file://`pwd`#egg=lemur[tests]"
