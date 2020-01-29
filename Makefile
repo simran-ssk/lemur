@@ -111,8 +111,6 @@ ifndef VIRTUAL_ENV
     $(error Please activate virtualenv first)
 endif
 	@echo "--> Updating Python requirements"
-	pip install --upgrade pip
-	pip install --upgrade pip-tools
 	pip-compile --output-file requirements.txt requirements.in -U --no-index
 	pip-compile --output-file requirements-docs.txt requirements-docs.in -U --no-index
 	pip-compile --output-file requirements-dev.txt requirements-dev.in -U --no-index
